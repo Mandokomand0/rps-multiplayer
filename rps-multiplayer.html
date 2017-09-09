@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Papers Siccors Multiplayer</title>
+	<link rel="stylesheet" type="text/css" href="assets/css-files/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css-files/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<!--Title Display-->
+			<div class="row">
+
+				<div class="col-md-12 title-area">
+					<div class="jumbotron">
+					  <h1 class="display-3">The Rock V The Paper V The Scissors!!!</h1>
+					  <p class="lead">Click panel of the respective players you wish to be and submit a username.</p>
+					</div>
+				</div>	
+
+			</div>
+			<br>
+
+		<!--Username Display-->
+			<div class="row">
+
+				<div class="col-md-6" id="player-one">
+				<div class="panel panel-info">
+						<div class="panel-heading">
+							<h1 class="player-name-plate" id="player-one-name">Player 1</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6" id="player-two">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h1 class="player-name-plate" id="player-two-name">Player 2</h1>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		<!--Button Choices-->
+			<div class="row">
+					<div class="col-md-4 janken display-3" id="rock" data-choice="the rock">
+						<img class="img-thumbnail" src="assets/gifs/rock.webp" alt="Chice 1 beats choice 3">
+					</div>
+
+					<div class="col-md-4 janken display-3" id="paper" data-choice="the paper">
+						<img class="img-thumbnail janken" src="assets/gifs/paper.webp" alt="Chice 2 beats choice 1">
+					</div>
+
+					<div class="col-md-4 janken display-3" id="scissors" data-choice="the-scissors">
+						<img class="img-thumbnail janken" src="assets/gifs/scissors.webp" alt="Chice 3 beats choice 2">
+					</div>
+					
+			</div>
+			<br>
+		<!--Score Display-->
+			<div class="row">
+
+				<div class="col-md-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2 id="win-counter"></h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h2 id="tie-counter"></h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h2 id="loss-counter"></h2>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+	</div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script type="text/javascript" src="assets//javascript/rps-multiplayer.js"></script>
+</html>

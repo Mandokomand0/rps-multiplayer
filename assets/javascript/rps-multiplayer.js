@@ -50,25 +50,40 @@ var twosPick = "";
 var oneHasPicked = false;
 var twoHasPicked = false;
 
+//psudo callers
+//var imMrMeeseeks = true;
+
 
 //Setting base firebase settings
 function intitailFirbasePush(){
-dataRef.ref().set({
-	playerOneName: playerOne,
-	playerOneTaken: oneSelected,
-	onePicked: onesPick,
-	oneHasSelected: oneHasPicked,
-	playerTwoName: playerTwo,
-	playerTwoTaken: twoSelected,
-	twoPicked: twosPick,
-	twoHasSelected: twoHasPicked,
-	dateAdded: firebase.database.ServerValue.TIMESTAMP
+	dataRef.ref().push({
+		playerOneName: playerOne,
+		playerOneTaken: oneSelected,
+		onePicked: onesPick,
+		oneHasSelected: oneHasPicked,
+		playerTwoName: playerTwo,
+		playerTwoTaken: twoSelected,
+		twoPicked: twosPick,
+		twoHasSelected: twoHasPicked,
+		dateAdded: firebase.database.ServerValue.TIMESTAMP
 	})
 };
 //This will assign placements to people based on load order.
 function initialLoading(){
+	//imMrMeeseeks = true;
 	//Will check for if a push happens
-	if (dataRef().) {}
+	//attempting to make it scan for an initial var on firebase
+	//that is set to make sure that a person is designated as first player if they load first. 
+	//Then second player to the person who loads in second.
+	//append a new child afterwards for anyone who wants to play in a different game.
+	dataRef.ref().ready({
+		mrMeeseeks: imMrMeeseeks
+	})
+	dataRef.ref().on('value' function(){
+
+	});
+
+	if () {}
 	//If there is no player default to being player one
 	if (oneSelected === false) {
 		if ((oneSelected === false) && (iAmPlayerTwo !== true)) {
@@ -91,6 +106,7 @@ function initialLoading(){
 		console.log(playerOne);
 		oneReadyToFight();
 	}
+}
 }
 
 
